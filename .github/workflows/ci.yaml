@@ -10,6 +10,7 @@ jobs:
   deploy:
     runs-on:
       - ubuntu-latest
-    run: "echo 'yeah!'"
+    steps:
+      - run: "echo 'yeah!'"
     
       
