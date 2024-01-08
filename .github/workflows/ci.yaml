@@ -1,0 +1,15 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '^workspaces/*/subnets/**'
+
+jobs: 
+  deploy:
+    runs-on:
+      - ubuntu-latest
+    run: "echo 'yeah!'"
+    
+      
