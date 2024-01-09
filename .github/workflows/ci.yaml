@@ -11,8 +11,6 @@ jobs:
     # Required permissions
     permissions:
       pull-requests: read
-    with:
-      ref: main
     # Set job outputs to values from filter step
     outputs:
       backend: ${{ steps.filter.outputs.withAutomatedChange }}
@@ -22,6 +20,7 @@ jobs:
     - uses: dorny/paths-filter@v2
       id: filter
       with:
+        ref: main
         filters: |
           withoutAutomatedChange:
             - 'workspaces/*/subnets/**'
