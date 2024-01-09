@@ -25,6 +25,8 @@ jobs:
         filters: |
           withoutAutomatedChange:
             - 'workspaces/*/subnets/**'
+          withAutomatedChange:
+            - '!workspaces/*/subnets/**'  
           
   runWithoutAutomatedChange:
     runs-on: ubuntu-latest
