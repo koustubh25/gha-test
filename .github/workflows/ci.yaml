@@ -24,7 +24,7 @@ jobs:
         ref: main
         filters: |
           withoutAutomatedChange:
-            - 'workspaces/*/subnets/xcrd.yaml'
+            - 'workspaces/*/subnets/**'
           
   runWithoutAutomatedChange:
     runs-on: ubuntu-latest
