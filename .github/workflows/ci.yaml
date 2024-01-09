@@ -26,8 +26,8 @@ jobs:
           withoutAutomatedChange:
             - 'workspaces/*/subnets/**'
           withAutomatedChange:
-            - '!workspaces/*/subnets/**'
-    
+            - '!workspaces/*/subnets/**'  
+          
   runWithoutAutomatedChange:
     runs-on: ubuntu-latest
     needs: changes
@@ -35,9 +35,11 @@ jobs:
     steps:
       - run: echo "running without automated change"
 
-  runWithAutomatedChange:
-    runs-on: ubuntu-latest
-    needs: changes
-    if: ${{ needs.changes.outputs.withAutomatedChange == 'true' }}
-    steps:
-      - run: echo "running with automated change"
+  # runWithAutomatedChange:
+  #   runs-on: ubuntu-latest
+  #   needs: changes
+  #   if: ${{ needs.changes.outputs.withAutomatedChange == 'true' }}
+  #   steps:
+  #     - run: echo "running with automated change"
+
+
