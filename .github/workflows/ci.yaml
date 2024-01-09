@@ -17,6 +17,7 @@ jobs:
       frontend: ${{ steps.filter.outputs.withoutAutomatedChange }}
     steps:
     # For pull requests it's not necessary to checkout the code
+    - uses: actions/checkout@v4
     - uses: dorny/paths-filter@v2
       id: filter
       with:
